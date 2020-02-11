@@ -14,5 +14,10 @@ pipeline {
                 sh 'npm install --production'
             }
         }
+        stage('Deliver') {
+            steps {
+                sh './scripts/deliver.sh'
+            }
+        }
     }
 }
